@@ -1,6 +1,5 @@
 package Task15;
-
-public class Runner {
+ public class Runner {
 
     public static void main(String[] args) {
 
@@ -8,5 +7,6 @@ public class Runner {
 
 
         System.out.println(computer.toString());
+
+        }
     }
-}
