@@ -11,39 +11,30 @@ public class Task32 {
 
         String text = new String("Большой большой большой супер ультра огромный текст или просто набор слов который супер супер супер сложно читать 4 4 4 4 ");
 
-        ArrayList<String> list = new ArrayList<>();
-
-        for (String s : text.split(" ")) {
-            list.add(s);
-        }
-        System.out.println(list);
 
         System.out.println("");
         System.out.println("Частотный словарь:");
-        System.out.println(dictionary(list).toString());
+        dictionary(text);
+
     }
 
 
-    static Map<String, Integer> dictionary(ArrayList<String> list) {
+    static void dictionary(String str) {
 
-        Map<String, Integer> map = new HashMap<>();
+        HashMap<String,Integer>  map = new HashMap<>();
 
-        int tmp = 1;
-
-        for (int i = 0; i < list.size(); i++) {
-            for (int j = 0; j < list.size(); j++) {
-                if (list.get(i).equals(list.get(j))) {
-                    tmp++;
-                }
+        String arr[] = str.split(" ");
+        for (int i = 0; i < arr.length ; i++) {
+            if(map.containsKey(arr[i])){
+                map.put(arr[i],map.get(arr[i])+1);
+            }else{
+                map.put(arr[i],1);
             }
-            map.put(list.get(i), --tmp);
-            tmp = 1;
         }
-
-
-        return map;
-    }
-
+        for(Map.Entry<String,Integer> entry : map.entrySet()){
+            System.out.println(entry.getKey() + " - " + entry.getValue());
+        }
+        }
 
 
 }

@@ -8,7 +8,7 @@ public class Store {
 
     ArrayList<Product> productList;
 
-    Store(ArrayList<Product> productList){
+    Store(ArrayList<Product> productList) {
         this.productList = productList;
     }
 
@@ -18,16 +18,20 @@ public class Store {
         if (productList.size() == 0) {
             productList.add(product);
         } else {
+            int count = 0;
             for (int i = 0; i < productList.size(); i++) {
-                if (product.equals(productList.get(i))) {
-
-                } else {
-                    productList.add(product);
-                    break;
+                if (product.getId() == productList.get(i).getId()) {
+                    count++;
                 }
+            }
+            if(count > 0){
+                System.out.println("Нельзя добавить с одинаковыми ID " + product.getName() + " " + product.getId() );
+            }else{
+                productList.add(product);
             }
         }
     }
+
 
     ArrayList<Product> getAll(ArrayList<Product> list) {
         return list;
@@ -42,13 +46,13 @@ public class Store {
         }
     }
 
-    void redaction (Product product){
-        productList.set(0,product);
+    void redaction(Product product) {
+        productList.set(0, product);
     }
 
-    void show (){
+    void show() {
         System.out.println("Список товаров:");
-        for (int i = 0; i < productList.size() ; i++) {
+        for (int i = 0; i < productList.size(); i++) {
             System.out.println(productList.get(i));
         }
     }
@@ -56,14 +60,14 @@ public class Store {
 
 }
 
-class ComparatorByPrice implements Comparator{
-    public int compare(Object o1, Object o2){
+class ComparatorByPrice implements Comparator {
+    public int compare(Object o1, Object o2) {
         return ((Product) o1).getPrice() - ((Product) o2).getPrice();
     }
 }
 
-class ComparatorById implements Comparator{
-    public int compare(Object o1, Object o2){
+class ComparatorById implements Comparator {
+    public int compare(Object o1, Object o2) {
         return ((Product) o2).getId() - ((Product) o1).getId();
     }
 }

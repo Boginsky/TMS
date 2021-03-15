@@ -15,13 +15,17 @@ public class Main {
         Product biscuits = new Product(15, "Biscuits", 280);
         Product apples = new Product(16, "Apple", 70);
         Product water = new Product(22, "Water", 20);
+        Product milk = new Product(22, "Milk", 22);
 
         store.add(crisps);
         store.add(iceCream);
         store.add(biscuits);
         store.add(apples);
         store.add(water);
+        store.add(milk);
 
+
+        System.out.println("");
         System.out.println("СПИСОК ПЕРЕД ПЕРВОЙ СОРТИРОВКОЙ:");
         store.show();
         Collections.sort(store.productList,new ComparatorByPrice());
