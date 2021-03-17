@@ -4,6 +4,17 @@ package Task15;
 //        и оперативной памяти.
 
 public class Computer {
+    String name;
+
+    Computer(String name){
+        this.name = name;
+    }
+
+    @Override
+    public String toString(){
+        return "Имя: " + this.name;
+    }
+
 
     public class Inner{
         private String os;
