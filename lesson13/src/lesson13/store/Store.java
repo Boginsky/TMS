@@ -47,7 +47,11 @@ public class Store {
     }
 
     void redaction(Product product) {
-        productList.set(0, product);
+        for (Product product1 : productList) {
+            if( product.getId() == product1.getId()){
+                productList.set(productList.indexOf(product1), product);
+            }
+        }
     }
 
     void show() {

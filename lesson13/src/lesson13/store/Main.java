@@ -37,7 +37,7 @@ public class Main {
         System.out.println("СПИСОК ПОСЛЕ УДАЛЕНИЯ ОБЪЕКТА:");
         Collections.sort(store.productList, new ComparatorById());
         store.show();
-        store.redaction(new Product(25,"Chocolate",100));
+        store.redaction(new Product(16,"Chocolate",100));
         System.out.println("");
         System.out.println("СПИСОК ПОСЛЕ РЕДАКТИРОВАНИЯ ПЕРВОГО ОБЪЕКТА");
         store.show();
