@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<devices>
+    <device computer="Kirill's_PC">
+        <components>
+            <cpu>
+                <name>i7_Kabby_Lake</name>
+                <manufacturer>USA</manufacturer>
+                <price currency = "EUR">250</price>
+                <critical>yes</critical>
+            </cpu>
+            <ram>
+                <name>Hypper</name>
+                <manufacturer>USA</manufacturer>
+                <price currency="EUR">90</price>
+                <critical>yes</critical>
+            </ram>
+            <hdd>
+                <name>WD</name>
+                <manufacturer>USA</manufacturer>
+                <price currency="USA">150</price>
+                <critical>yes</critical>
+            </hdd>
+            <graphics_card>
+                <name>Palit</name>
+                <manufacturer>USA</manufacturer>
+                <price currency="USA">800</price>
+                <critical>no</critical>
+            </graphics_card>
+        </components>
+    </device>
+</devices>
