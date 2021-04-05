@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+    <book>
+        <name>1984</name>
+        <genre>social_fiction</genre>
+        <author>George_Orwell</author>
+        <age>1949</age>
+        <cover>soft</cover>
+    </book>
+    <book>
+        <name>The_Master_and_Margarita</name>
+        <genre>Romance</genre>
+        <author>Mikhail_Bulgakov</author>
+        <age>1967</age>
+        <cover>solid</cover>
+    </book>
+    <book>
+        <name>Three_Comrades</name>
+        <genre>war_novel</genre>
+        <author>Erich_Maria_Ramarque</author>
+        <age>1937</age>
+        <cover>solid</cover>
+    </book>
+    <book>
+        <name>The_Sound_and_the_Fury</name>
+        <genre>Southern_Gothic</genre>
+        <author>William_Faulkner</author>
+        <age>1929</age>
+        <cover>soft</cover>
+    </book>
+    <book>
+        <name>It</name>
+        <genre>Horror</genre>
+        <author>Stephen_King</author>
+        <age>1986</age>
+        <cover>solid</cover>
+    </book>
+    <book>
+        <name>Idiot</name>
+        <genre>Philosophical_nover</genre>
+        <author>Fyodor_Dostoevsky</author>
+        <age>1874</age>
+        <cover>solid</cover>
+    </book>
+</library>
