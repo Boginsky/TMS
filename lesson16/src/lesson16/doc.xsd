@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="devices" type="devicesType"/>
+    <xs:complexType name="priceType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="currency" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="cpuType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="name"/>
+            <xs:element type="xs:string" name="manufacturer"/>
+            <xs:element type="priceType" name="price"/>
+            <xs:element type="xs:string" name="critical"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ramType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="name"/>
+            <xs:element type="xs:string" name="manufacturer"/>
+            <xs:element type="priceType" name="price"/>
+            <xs:element type="xs:string" name="critical"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="hddType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="name"/>
+            <xs:element type="xs:string" name="manufacturer"/>
+            <xs:element type="priceType" name="price"/>
+            <xs:element type="xs:string" name="critical"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="graphics_cardType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="name"/>
+            <xs:element type="xs:string" name="manufacturer"/>
+            <xs:element type="priceType" name="price"/>
+            <xs:element type="xs:string" name="critical"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="componentsType">
+        <xs:sequence>
+            <xs:element type="cpuType" name="cpu"/>
+            <xs:element type="ramType" name="ram"/>
+            <xs:element type="hddType" name="hdd"/>
+            <xs:element type="graphics_cardType" name="graphics_card"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="deviceType">
+        <xs:sequence>
+            <xs:element type="componentsType" name="components"/>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="computer"/>
+    </xs:complexType>
+    <xs:complexType name="devicesType">
+        <xs:sequence>
+            <xs:element type="deviceType" name="device"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
