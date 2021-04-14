@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="library" type="libraryType"/>
+  <xs:complexType name="bookType">
+    <xs:sequence>
+      <xs:element name="name">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="1984"/>
+            <xs:enumeration value="The_Master_and_Margarita"/>
+            <xs:enumeration value="Three_Comrades"/>
+            <xs:enumeration value="The_Sound_and_the_Fury"/>
+            <xs:enumeration value="It"/>
+            <xs:enumeration value="Idiot"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="genre">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="social_fiction"/>
+            <xs:enumeration value="Romance"/>
+            <xs:enumeration value="war_novel"/>
+            <xs:enumeration value="Southern_Gothic"/>
+            <xs:enumeration value="Horror"/>
+            <xs:enumeration value="Philosophical_nover"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="author">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="George_Orwell"/>
+            <xs:enumeration value="Mikhail_Bulgakov"/>
+            <xs:enumeration value="Erich_Maria_Ramarque"/>
+            <xs:enumeration value="William_Faulkner"/>
+            <xs:enumeration value="Stephen_King"/>
+            <xs:enumeration value="Fyodor_Dostoevsky"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="age">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="1949"/>
+            <xs:enumeration value="1967"/>
+            <xs:enumeration value="1937"/>
+            <xs:enumeration value="1929"/>
+            <xs:enumeration value="1986"/>
+            <xs:enumeration value="1874"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="cover">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="soft"/>
+            <xs:enumeration value="solid"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="libraryType">
+    <xs:sequence>
+      <xs:element type="bookType" name="book" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
